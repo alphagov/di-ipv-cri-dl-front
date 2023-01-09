@@ -4,6 +4,7 @@
 {% from "hmpo-text/macro.njk" import hmpoText %}
 {% from "hmpo-form/macro.njk" import hmpoForm %}
 {% from "hmpo-radios/macro.njk" import hmpoRadios %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
 
 {% call hmpoForm(ctx, {attributes: {onsubmit: 'window.disableFormSubmit()'} }) %}
 
@@ -17,6 +18,11 @@ id: "licenceIssuerRadio"
 {% block submitButton %}
     {{ hmpoSubmit(ctx, {id: 'submitButton'}) }}
 {% endblock %}
+
+{{ govukDetails({
+summaryText: translate("pages.licence-issuer.details.summary"),
+html: hmpoHtml(translate("pages.licence-issuer.details.text"))
+}) }}
 
 {% set footerNavItems = translate("govuk.footerNavItems") %}
 
