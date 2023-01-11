@@ -31,7 +31,7 @@ govuk:
         paragraph2: " at any time."
       buttonAcceptText: Accept analytics cookies
       buttonRejectText: Reject analytics cookies
-      linkViewCookies: View cookies
+      linkViewCookiesText: View cookies
       cookieBannerHideLink: Hide this message
   footerNavItems:
     meta:
